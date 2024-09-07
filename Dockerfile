@@ -10,7 +10,7 @@ ADD go.sum .
 RUN go mod download
 
 ADD . .
-RUN go build -o /go/bin/app ./cmd/kaspabridgebridge
+RUN go build -o /go/bin/app ./cmd/kaspabridge
 
 
 FROM gcr.io/distroless/base:nonroot
