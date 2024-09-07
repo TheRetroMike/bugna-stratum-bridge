@@ -10,12 +10,12 @@ ADD go.sum .
 RUN go mod download
 
 ADD . .
-RUN go build -o /go/bin/app ./cmd/bugnabridge
+RUN go build -o /go/bin/app ./cmd/kaspabridgebridge
 
 
 FROM gcr.io/distroless/base:nonroot
 COPY --from=builder /go/bin/app /
-COPY cmd/bugnabridge/config.yaml /
+COPY cmd/kaspabridge/config.yaml /
 
 WORKDIR /
 ENTRYPOINT ["/app"]
