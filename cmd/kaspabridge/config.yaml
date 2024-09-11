@@ -33,7 +33,7 @@ bugnad_address: localhost:38138
 print_stats: true
 
 # log_to_file: if true logs will be written to a file local to the executable
-log_to_file: true
+log_to_file: no
 
 # prom_port: if this is specified prometheus will serve stats on the port provided
 # see readme for summary on how to get prom up and running using docker
